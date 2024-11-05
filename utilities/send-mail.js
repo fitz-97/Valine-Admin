@@ -51,6 +51,7 @@ exports.notice = async function (comment) {
   const emailContent = noticeTemplate({
     siteName: process.env.SITE_NAME,
     siteUrl: process.env.SITE_URL,
+    adminUrl: process.env.ADMIN_URL,
     name: comment.get('nick'),
     text: comment.get('comment'),
     url: `${process.env.SITE_URL + comment.get('url')}#${comment.get('objectId')}`,
